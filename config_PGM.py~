@@ -1,0 +1,49 @@
+import socket
+hostname = socket.gethostname()
+
+if hostname == 'crunchy.cl.cam.ac.uk':
+    data_path = '/local/sdb/wd263/PGM/neutral/'
+    img_save_path = '/local/sdb/wd263/PGM/image_gen_sm/'
+    model_save_path = '/local/sdb/wd263/PGM/'
+elif hostname == 'kiiara.cl.cam.ac.uk':
+    data_path = '/local/scratch/wd263/PGM/neutral/'
+    img_save_path = '/local/scratch/wd263/PGM/image_gen_sm/'
+    model_save_path = '/local/scratch/wd263/PGM/'
+else:
+    data_path = '/rds-d2/project/t2_vol2/rds-t2-cs056/wd263/PGM/neutral/'
+    data_m_path = '/rds-d3/user/wd263/hpc-work/PGM/neutral_merged_m/' 
+    data_b_path = '/rds-d3/user/wd263/hpc-work/PGM/neutral_merged_b/'
+    data_8s_path = '/rds-d3/user/wd263/hpc-work/PGM/neutral_merged_8s/'
+    data_bs_path = '/rds-d2/project/t2_vol2/rds-t2-cs056/wd263/PGM/neutral_merged_bs/'
+    img_save_path = '/rds-d3/user/wd263/hpc-work/PGM/image_gen/'
+    model_save_path = '/rds-d3/user/wd263/hpc-work/PGM/'
+
+
+num_per_epoch = 1000
+num_valid = 500
+list_filepath = 'list_no_line.npz'
+batch_size =64
+
+
+T = 10
+bkgrd_T = 7
+A = 160
+B = 160
+z_size = 2
+cat_size = 7
+window_size = 32
+rnn_size = 256
+
+epoch_num = 2000
+learning_rate = 1e-4
+beta1 = 0.5
+USE_CUDA = True
+clip = 5.0
+anneal_rate=0.002
+tau_final = 0.5
+z_pres_prior= 0.02
+anneal_prior = 'None'
+anneal_prior_to = 1e-7
+anneal_prior_begin = 0
+anneal_prior_duration = 100000
+

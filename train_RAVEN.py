@@ -1,9 +1,5 @@
 import os
 import argparse
-import matplotlib
-matplotlib.use('Agg')
-matplotlib.rcParams['figure.figsize'] = 1280,1280
-import matplotlib.pyplot as plt
 import itertools
 
 import numpy as np

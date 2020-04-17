@@ -1,9 +1,6 @@
 import os
 import argparse
 import time
-import matplotlib
-matplotlib.use('Agg')
-matplotlib.rcParams['figure.figsize'] = 1280,1280
 import numpy as np
 import math
 import torch.optim as optim

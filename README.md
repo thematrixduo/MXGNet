@@ -4,9 +4,10 @@ Implementation for MXGNet  [Abstract Diagrammatic Reasoning with Multiplex Graph
 ## Dependencies:
 Tested in these versions but newer versions might work as well.
 
-* Python == 3.7.0
+* Python == 3.6.1
 * Pytorch == 1.2.0
-* NumPy == 
+* NumPy == 1.12.1
+* SciPy == 0.19.0
 
 ## Testing with pretrained model
 To test pretrained model (in 'pretrained_models').
